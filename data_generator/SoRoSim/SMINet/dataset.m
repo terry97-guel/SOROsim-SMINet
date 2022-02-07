@@ -33,3 +33,6 @@ for i = 7:8:80
         end
     end
 end
+%% Save
+
+writematrix(xyz, 'data711.txt')
