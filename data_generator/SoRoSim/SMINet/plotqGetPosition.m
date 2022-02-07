@@ -251,6 +251,8 @@ for i=1:N
         z_pre = z_here;
 
         centers = [];
+        center   = [mean(x_here), mean(y_here), mean(z_here)];
+        centers = [centers, center];
         for ii=1:n_l-1
             if S.VLinks(i).CS == 'C'
 
@@ -305,7 +307,7 @@ for i=1:N
             y_here     = pos_here(2,:);
             z_here     = pos_here(3,:);
             center   = [mean(x_here), mean(y_here), mean(z_here)];
-            centers = [centers; center];
+            centers = [centers, center];
             %Plotting soft link pieces
 %             plot3(x_here,y_here,z_here,'color',color)
             for jj=1:n_r-1

@@ -19,3 +19,17 @@ end
 a = NodlgStatics(S,zeros(S.ndof,1),[20,0,0]);
 %%
 S.plotq0()
+
+%%
+xyz = zeros(1000,33);
+l = 0;
+for i = 7:8:80
+    for j = 1:8:80
+        for k = 1:8:80
+            a = NodlgStatics(S,zeros(S.ndof,1),[-i, -j, -k]);
+            centers = plotqGetPosition(S,a,'FaceAlpha',0.1);
+            l = l+1;
+            xyz(l,:) = [i,j,k,centers*100];
+        end
+    end
+end
