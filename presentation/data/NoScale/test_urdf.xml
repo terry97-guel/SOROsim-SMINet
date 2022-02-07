@@ -1,0 +1,216 @@
+<?xml version="1.0" ?>
+<robot name="softrobot">
+   <link name="world"/>
+   <link name="base_link"/>
+   <link name="link_P0"/>
+   <joint name="world_fixed" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="world"/>
+      <child link="base_link"/>
+   </joint>
+   <joint name="root_base" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_P0"/>
+   </joint>
+   <joint name="R1" type="revolute">
+      <parent link="link_P0"/>
+      <child link="link_R1"/>
+      <origin rpy="0.06170028820633888 -0.0324997715651989 1.0388110876083374" xyz="-0.04218857362866402 0.004872407764196396 0.03591224178671837"/>
+      <axis xyz="0.7868439555168152 -0.42011338472366333 0.7765352129936218"/>
+   </joint>
+   <link name="link_R1"/>
+   <joint name="P1" type="prismatic">
+      <parent link="link_R1"/>
+      <child link="link_P1"/>
+      <origin rpy="-0.060382992029190063 -1.0964770317077637 -0.2455066591501236" xyz="0.022606611251831055 0.04165390133857727 0.0014049287419766188"/>
+      <axis xyz="0.35241585969924927 -0.7954148650169373 -0.17859989404678345"/>
+   </joint>
+   <link name="link_P1"/>
+   <joint name="T1" type="fixed">
+      <parent link="link_P1"/>
+      <child link="link_T1"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T1"/>
+   <joint name="R2" type="revolute">
+      <parent link="link_P1"/>
+      <child link="link_R2"/>
+      <origin rpy="0.3372921645641327 -0.1866053342819214 -1.0326144695281982" xyz="-0.015453025698661804 -0.22804120182991028 0.028897061944007874"/>
+      <axis xyz="0.1537768542766571 0.21979394555091858 0.03926042094826698"/>
+   </joint>
+   <link name="link_R2"/>
+   <joint name="P2" type="prismatic">
+      <parent link="link_R2"/>
+      <child link="link_P2"/>
+      <origin rpy="0.4306618869304657 0.280796080827713 -0.5720133185386658" xyz="0.05220926180481911 -0.033117521554231644 0.0130848353728652"/>
+      <axis xyz="-0.2867341637611389 0.18984977900981903 0.22125118970870972"/>
+   </joint>
+   <link name="link_P2"/>
+   <joint name="T2" type="fixed">
+      <parent link="link_P2"/>
+      <child link="link_T2"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T2"/>
+   <joint name="R3" type="revolute">
+      <parent link="link_P2"/>
+      <child link="link_R3"/>
+      <origin rpy="0.6621717810630798 -0.07064947485923767 0.4464022219181061" xyz="-0.0007388705853372812 -0.00015178322792053223 -0.00036313507007434964"/>
+      <axis xyz="0.5981378555297852 -0.09855064749717712 0.12950216233730316"/>
+   </joint>
+   <link name="link_R3"/>
+   <joint name="P3" type="prismatic">
+      <parent link="link_R3"/>
+      <child link="link_P3"/>
+      <origin rpy="0.23378565907478333 -0.4868415296077728 0.3848111033439636" xyz="-0.3034652769565582 -0.03479425981640816 -0.09392692148685455"/>
+      <axis xyz="-0.24457401037216187 0.4506461024284363 0.5721597075462341"/>
+   </joint>
+   <link name="link_P3"/>
+   <joint name="T3" type="fixed">
+      <parent link="link_P3"/>
+      <child link="link_T3"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T3"/>
+   <joint name="R4" type="revolute">
+      <parent link="link_P3"/>
+      <child link="link_R4"/>
+      <origin rpy="0.12262378633022308 -0.10735262185335159 0.2616538405418396" xyz="0.055032048374414444 -0.015055076219141483 -0.005669399164617062"/>
+      <axis xyz="-0.13961073756217957 0.17008674144744873 -0.8418200016021729"/>
+   </joint>
+   <link name="link_R4"/>
+   <joint name="P4" type="prismatic">
+      <parent link="link_R4"/>
+      <child link="link_P4"/>
+      <origin rpy="-0.8807060718536377 0.15336352586746216 -0.6754113435745239" xyz="0.10160516202449799 0.020776618272066116 0.0011398667702451348"/>
+      <axis xyz="-0.020571764558553696 0.19107694923877716 0.6613149046897888"/>
+   </joint>
+   <link name="link_P4"/>
+   <joint name="T4" type="fixed">
+      <parent link="link_P4"/>
+      <child link="link_T4"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T4"/>
+   <joint name="R5" type="revolute">
+      <parent link="link_P4"/>
+      <child link="link_R5"/>
+      <origin rpy="-0.16535718739032745 -0.8381994962692261 0.7912299036979675" xyz="0.33635687828063965 0.12708118557929993 -0.1878708302974701"/>
+      <axis xyz="-0.05887351185083389 -0.04347354546189308 -0.18870213627815247"/>
+   </joint>
+   <link name="link_R5"/>
+   <joint name="P5" type="prismatic">
+      <parent link="link_R5"/>
+      <child link="link_P5"/>
+      <origin rpy="-0.6124088168144226 -0.8728533983230591 -0.6659221649169922" xyz="-0.0012681083753705025 0.001755660166963935 -0.0007903274381533265"/>
+      <axis xyz="-0.14050336182117462 -0.13139696419239044 0.3121887743473053"/>
+   </joint>
+   <link name="link_P5"/>
+   <joint name="T5" type="fixed">
+      <parent link="link_P5"/>
+      <child link="link_T5"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T5"/>
+   <joint name="R6" type="revolute">
+      <parent link="link_P5"/>
+      <child link="link_R6"/>
+      <origin rpy="-0.4688331186771393 0.6854535937309265 -0.18839621543884277" xyz="0.24358664453029633 -0.22427865862846375 0.28960177302360535"/>
+      <axis xyz="-0.4593779742717743 -0.17345024645328522 0.49867865443229675"/>
+   </joint>
+   <link name="link_R6"/>
+   <joint name="P6" type="prismatic">
+      <parent link="link_R6"/>
+      <child link="link_P6"/>
+      <origin rpy="-0.6200106143951416 -0.4459306001663208 -0.20711523294448853" xyz="-0.004196373745799065 -0.004592441488057375 -0.0015612795250490308"/>
+      <axis xyz="-0.5231359004974365 -0.29096442461013794 -0.33125805854797363"/>
+   </joint>
+   <link name="link_P6"/>
+   <joint name="T6" type="fixed">
+      <parent link="link_P6"/>
+      <child link="link_T6"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T6"/>
+   <joint name="R7" type="revolute">
+      <parent link="link_P6"/>
+      <child link="link_R7"/>
+      <origin rpy="-0.6983702182769775 0.13561013340950012 0.8082091212272644" xyz="0.12663963437080383 0.2841193974018097 0.15597563982009888"/>
+      <axis xyz="0.06355872005224228 -0.1429874747991562 -0.12233518064022064"/>
+   </joint>
+   <link name="link_R7"/>
+   <joint name="P7" type="prismatic">
+      <parent link="link_R7"/>
+      <child link="link_P7"/>
+      <origin rpy="-0.3704151213169098 -0.4045798182487488 0.23941874504089355" xyz="0.006725518498569727 0.0007303491584025323 0.0019259975524619222"/>
+      <axis xyz="0.6591322422027588 0.059377677738666534 -0.191964790225029"/>
+   </joint>
+   <link name="link_P7"/>
+   <joint name="T7" type="fixed">
+      <parent link="link_P7"/>
+      <child link="link_T7"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T7"/>
+   <joint name="R8" type="revolute">
+      <parent link="link_P7"/>
+      <child link="link_R8"/>
+      <origin rpy="0.13636398315429688 -0.08193282037973404 0.07898818701505661" xyz="-0.30346575379371643 0.1424480378627777 -0.04367920756340027"/>
+      <axis xyz="0.172890767455101 0.19995319843292236 -0.6718752384185791"/>
+   </joint>
+   <link name="link_R8"/>
+   <joint name="P8" type="prismatic">
+      <parent link="link_R8"/>
+      <child link="link_P8"/>
+      <origin rpy="0.14814844727516174 0.38140055537223816 -0.31620877981185913" xyz="-0.0010820265160873532 -8.565036114305258e-05 -0.00023011649318505079"/>
+      <axis xyz="0.022595761343836784 0.0030423691496253014 0.03364613279700279"/>
+   </joint>
+   <link name="link_P8"/>
+   <joint name="T8" type="fixed">
+      <parent link="link_P8"/>
+      <child link="link_T8"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T8"/>
+   <joint name="R9" type="revolute">
+      <parent link="link_P8"/>
+      <child link="link_R9"/>
+      <origin rpy="0.6504243612289429 -0.17937828600406647 -0.028810637071728706" xyz="-0.0007553600007668138 -0.00039069788181222975 -0.0005742828943766654"/>
+      <axis xyz="-0.01452564261853695 0.0020727149676531553 0.0027286133263260126"/>
+   </joint>
+   <link name="link_R9"/>
+   <joint name="P9" type="prismatic">
+      <parent link="link_R9"/>
+      <child link="link_P9"/>
+      <origin rpy="0.6863529086112976 0.17270681262016296 -0.043548692017793655" xyz="-0.0009320881217718124 -0.0004666641470976174 -0.000573991856072098"/>
+      <axis xyz="0.022563232108950615 -0.01002707239240408 -0.06927696615457535"/>
+   </joint>
+   <link name="link_P9"/>
+   <joint name="T9" type="fixed">
+      <parent link="link_P9"/>
+      <child link="link_T9"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T9"/>
+   <joint name="R10" type="revolute">
+      <parent link="link_P9"/>
+      <child link="link_R10"/>
+      <origin rpy="-0.1440616250038147 -0.2997320890426636 0.13762634992599487" xyz="0.058552857488393784 0.05357913300395012 -0.03522251173853874"/>
+      <axis xyz="-0.0012330287136137486 -0.0030010645277798176 0.0022904917132109404"/>
+   </joint>
+   <link name="link_R10"/>
+   <joint name="P10" type="prismatic">
+      <parent link="link_R10"/>
+      <child link="link_P10"/>
+      <origin rpy="5.370032454266038e-07 0.00014565230230800807 -7.707465556450188e-05" xyz="0.12012972682714462 0.11945623904466629 -0.10453695058822632"/>
+      <axis xyz="0.0024646827951073647 -0.0004629900795407593 -0.0022779193241149187"/>
+   </joint>
+   <link name="link_P10"/>
+   <joint name="T10" type="fixed">
+      <parent link="link_P10"/>
+      <child link="link_T10"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+   </joint>
+   <link name="link_T10"/>
+</robot>
